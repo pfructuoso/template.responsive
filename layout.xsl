@@ -117,14 +117,6 @@
                                         <i class="icon-list-alt"></i>&#160;Class hierarchy diagram</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown" id="reports-menu">
-                                <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                    Reports <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <xsl:apply-templates select="/" mode="report-overview" />
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                     <!--<form class="navbar-search pull-right" onsubmit="$('.element:parent').show(); $('.element h1:not(:contains('+$('#search-query').val()+'))').parent().hide();return false;">-->
@@ -143,9 +135,7 @@
 
     <xsl:template match="/" mode="content-footer">
         <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br />
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor <xsl:value-of select="$version"/></a> and<br />
-            generated on <xsl:value-of select="date:date-time()" />.<br />
+	    Kairion GmbH
         </footer>
     </xsl:template>
 
@@ -159,7 +149,7 @@
             <xsl:if test="$title = ''">phpDocumentor</xsl:if>
             <xsl:apply-templates select="." mode="title"/>
         </title>
-        <meta name="author" content="Mike van Riel" />
+        <meta name="author" content="Kairion GmbH" />
         <meta name="description" content="" />
 
         <!--[if lt IE 9]>
@@ -202,39 +192,6 @@
                 <xsl:apply-templates select="." mode="footer" />
             </body>
         </html>
-    </xsl:template>
-
-    <xsl:template match="/" mode="report-overview">
-        <li>
-            <a href="{$root}errors.html">
-                <i class="icon-remove-sign"></i>&#160;Errors&#160;
-                <span class="label label-info"><xsl:value-of select="count(/project/file/parse_markers/*)" /></span>
-            </a>
-        </li>
-        <li>
-            <a href="{$root}markers.html">
-                <i class="icon-map-marker"></i>&#160;Markers&#160;
-                <ul>
-                    <xsl:apply-templates select="/project/marker" mode="report-overview" />
-                </ul>
-            </a>
-        </li>
-        <li>
-            <a href="{$root}deprecated.html">
-                <i class="icon-stop"></i>&#160;Deprecated elements&#160;
-                <span class="label label-info"><xsl:value-of select="/project/deprecated/@count" /></span>
-            </a>
-        </li>
-    </xsl:template>
-
-    <xsl:template match="/project/marker" mode="report-overview">
-        <xsl:variable name="marker" select="."/>
-        <xsl:if test="./@count > 0">
-            <li>
-                <xsl:value-of select="$marker" />&#160;
-                <span class="label label-info"><xsl:value-of select="./@count" /></span>
-            </li>
-        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

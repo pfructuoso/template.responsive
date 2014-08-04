@@ -41,16 +41,6 @@
                                 <li><a href="" onclick="$('body *').fadeOut(); $('body').load(this.href); return false;">Class hierarchy diagram</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Errors</a></li>
-                                <li><a href="#">Markers (TODO/FIXME)</a></li>
-                                <li><a href="">Deprecated elements</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <form class="navbar-search pull-right" onsubmit="$('.element:parent').show(); $('.element h1:not(:contains('+$('#search-query').val()+'))').parent().hide();return false;">
@@ -77,26 +67,11 @@
                     </li>
                 </ul>
 
-                <div id="displayXHProfReport" href="functions/displayXHProfReport.html" class="element function" data-toggle="collapse" data-target=".details">
-                    <h1>
-                        displayXHProfReport(object $xhprof_runs_impl, array $url_params, string $source, string $run, string $wts, string $symbol, $sort, string $run1, string $run2) : void
-                        <a href="functions/displayXHProfReport.html">¶</a>
-                    </h1>
-                    <p class="short_description">Generate a XHProf Display View given the various URL parameters as arguments. The first argument is an object that implements the iXHProfRuns interface.</p>
-
-                    <div class="details collapse">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non neque id mauris pharetra imperdiet. Mauris auctor, lectus id posuere fringilla, ligula eros iaculis odio, quis ornare augue erat id eros. Sed lorem lectus, luctus ullamcorper varius quis, viverra ut lacus. Aenean vitae leo massa, a ullamcorper velit. Nulla commodo velit id enim elementum eu tempor ipsum semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sed arcu quam, bibendum vulputate nulla.
-                    </div>
-                    <a href="functions/displayXHProfReport.html" class="more">&laquo; More &raquo;</a>
-                </div>
-
             </div>
 
             <div class="span3">
                 <ul class="side-nav nav nav-list">
                     <li class="nav-header">Navigation</li>
-                    <li class="function"><a href="#displayXHProfReport">displayXHProfReport</a></li>
-                    <li class="function"><a href="#full_report">full_report</a></li>
                     <li class="function"><a href="#get_print_class">get_print_class</a></li>
                     <li class="class"><a href="#DocBlox_Abstract">\DocBlox_Abstract</a></li>
                 </ul>

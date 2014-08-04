@@ -5,10 +5,10 @@
     <xsl:template match="/project" mode="contents">
 
         <div class="hero-unit">
-            <h1>
-                <xsl:value-of select="$title" disable-output-escaping="yes"/>
-                <xsl:if test="$title = ''">phpDocumentor</xsl:if>
-            </h1>
+            <!--<h1>-->
+                <!--<xsl:value-of select="$title" disable-output-escaping="yes"/>-->
+                <!--<xsl:if test="$title = ''">phpDocumentor</xsl:if>-->
+            <!--</h1>-->
             <h2>Documentation</h2>
         </div>
 
@@ -70,12 +70,6 @@
                                 <i class="icon-list-alt"></i> Class inheritance diagram
                             </a>
                         </li>
-                    </ul>
-                </div>
-                <div class="well">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">Reports</li>
-                        <xsl:apply-templates select="/" mode="report-overview" />
                     </ul>
                 </div>
             </div>
